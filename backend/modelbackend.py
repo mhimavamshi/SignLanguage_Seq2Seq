@@ -1,7 +1,7 @@
 from flask import Flask
 import tensorflow as tf
 reloaded = tf.saved_model.load('./Translator/translator')
-_ = reloaded.translate(tf.constant(["how are you"]))
+_ = reloaded.translate(tf.constant(["how are you"])) # pre-load the model 
 app=Flask(__name__)
 @app.route("/")
 def hello():
